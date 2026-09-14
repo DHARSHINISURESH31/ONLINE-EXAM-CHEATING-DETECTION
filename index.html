@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam Cheating Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Online Exam Cheating Detection</h1>
+    <p class="subtitle">AI Based Online Examination Monitoring System</p>
+
+    <div id="login">
+        <h2>Student Login</h2>
+
+        <input type="text" id="studentName" placeholder="Enter your name">
+
+        <button onclick="startExam()">Start Exam</button>
+    </div>
+
+    <div id="exam" style="display:none;">
+
+        <div class="top">
+            <span>Student: <b id="nameDisplay"></b></span>
+            <span>Time: <b id="timer">60</b> sec</span>
+        </div>
+
+        <div class="monitor">
+            <h3>Exam Monitoring</h3>
+
+            <video id="camera" autoplay></video>
+
+            <p id="warning">Warnings: 0</p>
+        </div>
+
+        <div class="question">
+            <h3>1. Which language is mainly used for web page structure?</h3>
+
+            <label>
+                <input type="radio" name="q1" value="HTML"> HTML
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="Python"> Python
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="Java"> Java
+            </label>
+        </div>
+
+        <div class="question">
+            <h3>2. What does AI stand for?</h3>
+
+            <label>
+                <input type="radio" name="q2" value="Artificial Intelligence">
+                Artificial Intelligence
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="Automatic Internet">
+                Automatic Internet
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="Advanced Input">
+                Advanced Input
+            </label>
+        </div>
+
+        <button onclick="submitExam()">Submit Exam</button>
+
+    </div>
+
+    <div id="result" style="display:none;">
+        <h2>Exam Completed</h2>
+
+        <p id="score"></p>
+
+        <button onclick="location.reload()">Try Again</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
